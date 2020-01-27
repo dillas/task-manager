@@ -1,0 +1,35 @@
+@import './../variables';
+
+.overlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  width: 100vw;
+  background: rgba(255, 255, 255, .9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.panel {
+  background: $light-color;
+  border-radius: 4px;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, .18), 0 1px 2px 0 rgba(0, 0, 0, .04), 0 2px 6px 0 rgba(0, 0, 0, .04);
+  padding: 20px;
+}
+.head {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  h2 {
+    margin: 5px 0;
+  }
+}
+
+.closeButton {
+
+}
+
+

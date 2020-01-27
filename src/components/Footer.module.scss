@@ -1,0 +1,10 @@
+@import './../variables';
+
+.footer {
+  background: $dark-color;
+  color: $light-color;
+  height: 40px;
+  p {
+    padding: 12px;
+  }
+}

@@ -1,0 +1,21 @@
+@import '../variables';
+
+.formInput {
+  border-radius: 4px;
+  display: block;
+  line-height: 30px;
+  border: 1px solid $back-color;
+  background-color: $light-color;
+  padding: 0 10px;
+  width: 300px;
+  margin-top: 5px;
+}
+
+.formError {
+  font-size: 11px;
+  color: $error-color;
+}
+
+.formField {
+  margin: 10px 0 15px;
+}
