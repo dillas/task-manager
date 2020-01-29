@@ -4,7 +4,7 @@ import styles from './Footer.module.scss'
 const Footer = () => {
   return (
     <div className={styles.footer} >
-      <p>© 2019 Dillas</p>
+      <p>© 2020 Dillas</p>
     </div>
   )
 }

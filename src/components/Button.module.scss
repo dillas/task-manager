@@ -13,6 +13,7 @@
   svg {
     margin-bottom: -2px;
     fill: $dark-color;
+    transition: all .1s ease-in-out;
   }
 
   &:hover {
