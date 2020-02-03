@@ -3,8 +3,19 @@
 .footer {
   background: $dark-color;
   color: $light-color;
-  p {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  div {
     padding: 12px;
-    margin: 0;
+
+    .copyright {
+      margin: 0;
+
+    }
+    .nav {
+      color: $light-color;
+    }
   }
 }

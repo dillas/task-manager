@@ -3,9 +3,7 @@ import Button from './Button'
 import { cancelIcon } from './Icons'
 import styles from './Modal.module.scss'
 
-const Modal = ({ title, children, isOpen, onRequestClose }) => {
-  if (!isOpen) return null
-
+const Modal = ({ title, children, onRequestClose }) => {
   return (
     <div>
       <div className={styles.overlay}>

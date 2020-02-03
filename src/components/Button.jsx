@@ -1,23 +1,23 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 import styles from './Button.module.scss'
 
-const Button = ({icon, classname, label, type, handleClick}) => {
+const Button = ({icon, classname, label, type, handleClick = () => {}}) => {
+
+  const buttonClick = (e) => {
+    e.preventDefault()
+    handleClick()
+  }
+
   return (
     <button
+      type='submit'
       className={`${styles.btn} ${classname} ${styles[type]}`}
-      onClick={handleClick}
+      onClick={(e) => buttonClick(e)}
     >
        {label}  {icon}
     </button>
   )
 }
 
-Button.propTypes = {
-  label: PropTypes.string,
-  icon: PropTypes.element,
-  type: PropTypes.oneOf(['primary', 'secondary', 'error']),
-  handleClick: PropTypes.func
-}
 
 export default Button

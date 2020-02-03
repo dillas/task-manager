@@ -2,12 +2,14 @@ import React from 'react'
 import Input from './Input'
 import Button from './Button'
 
-const AddTaskForm = ({buttonClick}) => {
+
+const AddTaskForm = ({changeNewTaskField, newTaskName, createTask}) => {
+
   return (
-    <div>
-      <Input label='Краткое описание' error='Заголовок не может быть пустым.' />
-      <Button type='secondary' label='Создать' handleClick={() => buttonClick('Button clicked')} />
-    </div>
+      <form>
+        <Input value={newTaskName} handleChange={changeNewTaskField} label='Краткое описание' error='Заголовок не может быть пустым.' />
+        <Button type='secondary' label='Создать' handleClick={() => createTask(newTaskName)} />
+      </form>
   )
 }
 
