@@ -10,7 +10,7 @@ const UpdateTasksPage = () => {
     console.log(text)
   }
 
-  const headerButton = <Button icon={deleteIcon} type='error' label='Удалить' handleClick={() => buttonClick('Button clicked')} />
+  const headerButton = <Button onClick={() => buttonClick('Button clicked')}>Удалить {deleteIcon}</Button>
 
   return (
     <>

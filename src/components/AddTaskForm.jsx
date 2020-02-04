@@ -5,10 +5,21 @@ import Button from './Button'
 
 const AddTaskForm = ({changeNewTaskField, newTaskName, createTask}) => {
 
+  const onSubmitForm = (e) => {
+    debugger
+    e.preventDefault()
+    createTask(newTaskName)
+  }
+
+  const onInputChange = (e) => {
+
+    changeNewTaskField(e.target.value)
+  }
+
   return (
       <form>
-        <Input value={newTaskName} handleChange={changeNewTaskField} label='Краткое описание' error='Заголовок не может быть пустым.' />
-        <Button type='secondary' label='Создать' handleClick={() => createTask(newTaskName)} />
+        <Input value={newTaskName} onChange={onInputChange} label='Краткое описание' error='Заголовок не может быть пустым.' />
+        <Button onClick={onSubmitForm} type='submit'>Создать</Button>
       </form>
   )
 }

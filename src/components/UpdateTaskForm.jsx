@@ -6,8 +6,8 @@ const UpdateTaskForm = ({buttonClick}) => {
   return (
     <div>
       <Input label='Краткое описание' error='Заголовок не может быть пустым.' />
-      <Button type='secondary' label='Создать' handleClick={() => buttonClick('Button clicked')} />
-      <Button type='secondary' label='Вернуться к списку' handleClick={() => buttonClick('Button clicked')} />
+      <Button onClick={() => buttonClick('Button clicked')}>Создать</Button>
+      <Button onClick={() => buttonClick('Button clicked')}>Вернуться к списку</Button>
     </div>
   )
 }

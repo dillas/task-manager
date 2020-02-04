@@ -1,5 +1,9 @@
 @import '../variables';
 
+a.btn{
+  text-decoration: none;
+}
+
 .btn {
   border-radius: 4px;
   transition: all .1s ease-in-out;
@@ -16,6 +20,11 @@
     transition: all .1s ease-in-out;
   }
 
+  &[disabled] {
+    opacity: .5;
+    cursor: not-allowed;
+  }
+
   &:hover {
     border-color: $back-color;
     background-color: $dark-color;
@@ -25,31 +34,31 @@
       fill: $light-color;
     }
   }
+}
 
-  &.primary {
-    border: 1px solid $primary-color;
-    svg {fill: $primary-color;}
-    &:hover {
-      background-color: $primary-color;
-      svg {fill: $light-color;}
-    }
+.primary {
+  border: 1px solid $primary-color;
+  svg {fill: $primary-color;}
+  &:hover {
+    background-color: $primary-color;
+    svg {fill: $light-color;}
   }
+}
 
-  &.secondary {
-    border: 1px solid $secondary-color;
-    svg {fill: $secondary-color;}
-    &:hover {
-      background-color: $secondary-color;
-      svg {fill: $light-color;}
-    }
+.secondary {
+  border: 1px solid $secondary-color;
+  svg {fill: $secondary-color;}
+  &:hover {
+    background-color: $secondary-color;
+    svg {fill: $light-color;}
   }
+}
 
-  &.error {
-    border: 1px solid $error-color;
-    svg {fill: $error-color;}
-    &:hover {
-      background-color: $error-color;
-      svg {fill: $light-color;}
-    }
+.error {
+  border: 1px solid $error-color;
+  svg {fill: $error-color;}
+  &:hover {
+    background-color: $error-color;
+    svg {fill: $light-color;}
   }
 }

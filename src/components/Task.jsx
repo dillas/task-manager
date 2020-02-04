@@ -14,9 +14,9 @@ const Task = ({task, deleteTask}) => {
       <div className={styles.title}>{task.title}</div>
       <div className={styles.buttons}>
         <Link to={`task/${task.id}`}>
-          <Button icon={editIcon} type='primary' />
+          <Button btnType='primary'>{editIcon}</Button>
         </Link>
-        <Button icon={deleteIcon} type='error' handleClick={() => deleteTask(task.id)} />
+        <Button btnType='error' onClick={() => deleteTask(task.id)}>{deleteIcon}</Button>
       </div>
     </div>
   )
